@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private float speed = 12.0f;
     public float horizontalInput;
+    public float verticalInput;
     public float leftBoundary = -20.0f;
     public float rightBoundary = 20.0f;
 
@@ -29,7 +30,9 @@ public class PlayerController : MonoBehaviour
         }
 
         horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
 
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
     }
 }
