@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float verticalInput;
     public float leftBoundary = -20.0f;
     public float rightBoundary = 20.0f;
+    
 
     // Start is called before the first frame update
     void Start()
