@@ -6,7 +6,7 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject enemyPrefab;
     public GameObject powerupPrefab;
-    private float spawnRange = 9.0f;
+    private float spawnRange = 15.0f;
     public int enemyCount;
     public int waveNumber = 1;
 
@@ -18,6 +18,7 @@ public class SpawnManager : MonoBehaviour
     }
 
     // Update is called once per frame
+
     void Update()
    {
       enemyCount = FindObjectsOfType<Enemy>().Length;
