@@ -32,6 +32,7 @@ public class SpawnManager : MonoBehaviour
 
     void Update()
    {
+      //changed this to search for items tagged with "Enemy", also tagged all enemies.
       enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
       if(enemyCount == 0)
@@ -44,9 +45,9 @@ public class SpawnManager : MonoBehaviour
 
    public void SpawnEnemyWave(int enemiesToSpawn)
    {
+      //changed int for 0 to 1 since if it's set to 0 2 enemies spawn at the start.
       for (int i = 1; i < enemiesToSpawn; i++)
       {
-         Debug.Log("working");
          Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
       }   
    }
