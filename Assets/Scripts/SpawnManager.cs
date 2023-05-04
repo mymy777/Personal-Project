@@ -13,33 +13,45 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      SpawnEnemyWave(waveNumber);
-      Instantiate(powerupPrefab,GenerateSpawnPosition(), powerupPrefab.transform.rotation);
+      //SpawnEnemyWave(waveNumber);
+      //Instantiate(powerupPrefab,GenerateSpawnPosition(), powerupPrefab.transform.rotation);
+      //StartCoroutine(SpawnEnemyWave());
+
     }
+
+   //randomPos returns spawn positions for the enemies in the right areas
+    /*public SpawnEnemyWave()
+    {
+      while(true)
+      {
+         Vector3 spawnPosition = new (randomPos);
+      }
+    }*/
 
     // Update is called once per frame
 
     void Update()
    {
-      enemyCount = FindObjectsOfType<Enemy>().Length;
+      enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
-     if(enemyCount == 0)
-     {
-      waveNumber++;
-      SpawnEnemyWave(waveNumber);
-      Instantiate(powerupPrefab,GenerateSpawnPosition(), powerupPrefab.transform.rotation);
-     }
+      if(enemyCount == 0)
+      {
+         waveNumber++;
+         SpawnEnemyWave(waveNumber);
+         Instantiate(powerupPrefab,GenerateSpawnPosition(), powerupPrefab.transform.rotation);
+      }
    }
 
-   void SpawnEnemyWave(int enemiesToSpawn)
+   public void SpawnEnemyWave(int enemiesToSpawn)
    {
-      for (int i = 0; i < enemiesToSpawn; i++)
+      for (int i = 1; i < enemiesToSpawn; i++)
       {
+         Debug.Log("working");
          Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
       }   
    }
 
-    private Vector3 GenerateSpawnPosition()
+    public Vector3 GenerateSpawnPosition()
     {
        float spawnPosX = Random.Range(-spawnRange, spawnRange);
        float spawnPosZ = Random.Range(-spawnRange, spawnRange);

@@ -868,6 +868,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy4
       objectReference: {fileID: 0}
+    - target: {fileID: 176184, guid: 7b008d3317859a847b83f2613744530b, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 425266, guid: 7b008d3317859a847b83f2613744530b, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -937,6 +941,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy3
       objectReference: {fileID: 0}
+    - target: {fileID: 174028, guid: 7d778c6a61935e74393cd80fa8335495, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 481786, guid: 7d778c6a61935e74393cd80fa8335495, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1005,6 +1013,10 @@ PrefabInstance:
     - target: {fileID: 102972, guid: 0240838b56fa8744abdedafcb5a80ebb, type: 3}
       propertyPath: m_Name
       value: Enemy2
+      objectReference: {fileID: 0}
+    - target: {fileID: 102972, guid: 0240838b56fa8744abdedafcb5a80ebb, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 492570, guid: 0240838b56fa8744abdedafcb5a80ebb, type: 3}
       propertyPath: m_RootOrder
@@ -1410,6 +1422,10 @@ PrefabInstance:
     - target: {fileID: 185068, guid: 4106696a93ada1946984a959b5f7d02f, type: 3}
       propertyPath: m_Name
       value: Enemy1
+      objectReference: {fileID: 0}
+    - target: {fileID: 185068, guid: 4106696a93ada1946984a959b5f7d02f, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 424508, guid: 4106696a93ada1946984a959b5f7d02f, type: 3}
       propertyPath: m_RootOrder
