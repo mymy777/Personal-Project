@@ -4,47 +4,46 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject enemyPrefab;
-    public GameObject powerupPrefab;
-    private float spawnRange = 9.0f;
-    public int enemyCount;
-    public int waveNumber = 1;
+
+    public Vector3 bottomLeftCorner;
+    public Vector3 topRightCorner;
+    public GameObject[] enemyPrefabs;
+    public int numberOfEnemies;
+    public Vector2 spawnTimeRange;
+
 
     // Start is called before the first frame update
     void Start()
     {
-      SpawnEnemyWave(waveNumber);
-      Instantiate(powerupPrefab,GenerateSpawnPosition(), powerupPrefab.transform.rotation);
+      StartCoroutine(SpawnEnemies());
     }
 
     // Update is called once per frame
-    void Update()
-   {
-      enemyCount = FindObjectsOfType<Enemy>().Length;
-
-     if(enemyCount == 0)
-     {
-      waveNumber++;
-      SpawnEnemyWave(waveNumber);
-      Instantiate(powerupPrefab,GenerateSpawnPosition(), powerupPrefab.transform.rotation);
-     }
-   }
-
-   void SpawnEnemyWave(int enemiesToSpawn)
-   {
-      for (int i = 0; i < enemiesToSpawn; i++)
-      {
-         Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
-      }   
-   }
-
-    private Vector3 GenerateSpawnPosition()
+    void Update() 
     {
-       float spawnPosX = Random.Range(-spawnRange, spawnRange);
-       float spawnPosZ = Random.Range(-spawnRange, spawnRange);
 
-       Vector3 randomPos = new Vector3(spawnPosX, 0, spawnPosZ);
-
-       return randomPos;
     }
+
+    private IEnumerator SpawnEnemies()
+{
+   for (int i = -16; i < numberOfEnemies; i++)
+    {
+        // Generate a random position within the square area
+        float x = Random.Range(bottomLeftCorner.x, topRightCorner.x);
+        float z = Random.Range(bottomLeftCorner.z, topRightCorner.z);
+        Vector3 spawnPosition = new Vector3(x, bottomLeftCorner.y, z);
+
+        //randomly choose an enemy prefab from an array
+        GameObject randomEnemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
+
+        
+        
+        // Instantiate the enemy prefab at the generated position
+        Instantiate(randomEnemyPrefab, spawnPosition, Quaternion.identity);
+
+        // Wait for a random time between spawnTimeRange.x and spawnTimeRange.y before spawning the next enemy
+        float waitTime = Random.Range(spawnTimeRange.x, spawnTimeRange.y);
+        yield return new WaitForSeconds(waitTime);
+    }
+}
 }
