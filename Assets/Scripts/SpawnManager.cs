@@ -26,7 +26,7 @@ public class SpawnManager : MonoBehaviour
 
     private IEnumerator SpawnEnemies()
 {
-   for (int i = 0; i < numberOfEnemies; i++)
+   for (int i = -16; i < numberOfEnemies; i++)
     {
         // Generate a random position within the square area
         float x = Random.Range(bottomLeftCorner.x, topRightCorner.x);

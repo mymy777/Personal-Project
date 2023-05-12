@@ -153,8 +153,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bottomLeftCorner: {x: -15, y: 0.5, z: -5}
-  topRightCorner: {x: 19, y: 0.4, z: 5}
-  enemyPrefabs: []
+  topRightCorner: {x: 15, y: 0.4, z: 5}
+  enemyPrefabs:
+  - {fileID: 1575717044442217945, guid: 267737f4660dc4deabf8118b2bb9b057, type: 3}
+  - {fileID: 2953209776526569658, guid: 68f44a759d38d4ed987813aa781f5992, type: 3}
+  - {fileID: 3869715938837663940, guid: fb587ae5606eb4901872a66c1d8a7ae8, type: 3}
+  - {fileID: 7949529810123592610, guid: 24718f4a89b924913aba45c1cb394fa7, type: 3}
   numberOfEnemies: 100
   spawnTimeRange: {x: 1, y: 3}
 --- !u!4 &360246
