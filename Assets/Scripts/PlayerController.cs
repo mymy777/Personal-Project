@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public float verticalInput;
     public float leftBoundary = -20.0f;
     public float rightBoundary = 20.0f;
-    public bool hasPowerup = true;
+    public bool hasPowerup = false;
     
 
     // Start is called before the first frame update
@@ -47,11 +47,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision) 
+    private void OnCollisionEnter(Collider collision) 
     {
-        if(collision.gameObject.CompareTag("Enemy") && hasPowerup) 
-        {
-            Debug.Log("Collided with: " + collision.gameObject.name + " with powerup set to " + hasPowerup);
-        }
+       if(CompareTag("Enemy"))
+        Destroy(gameObject);
     }
 }
+ 
