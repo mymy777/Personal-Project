@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1575717044445373029}
   - component: {fileID: 1575717044444258775}
   - component: {fileID: -2835976776424859928}
-  - component: {fileID: 7156204038230315880}
+  - component: {fileID: 4141271150711101687}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Enemy
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.42835715, y: 0.45040157, z: 1.5238461}
   m_Center: {x: 0.000000014901161, y: -0.000000014901165, z: 0.025178974}
---- !u!54 &7156204038230315880
+--- !u!54 &4141271150711101687
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

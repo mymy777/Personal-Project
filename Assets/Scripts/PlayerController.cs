@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float speed = 10.0f;
+    public float speed = 10.0f;
+    private Rigidbody playerRb;
     public float horizontalInput;
     public float verticalInput;
-    public float leftBoundary = -20.0f;
-    public float rightBoundary = 20.0f;
+    public float leftBoundary = -40.0f;
+    public float rightBoundary = 40.0f;
     public bool hasPowerup = false;
+    public GameObject powerupIndicator;
     
 
     // Start is called before the first frame update
@@ -45,12 +47,12 @@ public class PlayerController : MonoBehaviour
             hasPowerup = true;
             Destroy(other.gameObject);
         }
-    }
 
-    private void OnCollisionEnter(Collider collision) 
-    {
-       if(CompareTag("Enemy"))
-        Destroy(gameObject);
+        /*if(other.CompareTag("Enemy"))
+        {
+            Destroy(other.GameObject);
+        }*/
+
     }
 }
  
