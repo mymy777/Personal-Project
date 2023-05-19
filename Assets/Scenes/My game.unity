@@ -466,7 +466,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1887969965315444, guid: 1656aec7f2b3ffe45a91801f58b00253, type: 3}
       propertyPath: m_IsActive
+<<<<<<< Updated upstream
       value: 0
+=======
+      value: 1
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 4740640696147648, guid: 1656aec7f2b3ffe45a91801f58b00253, type: 3}
       propertyPath: m_RootOrder
@@ -1386,6 +1390,7 @@ Transform:
   m_Father: {fileID: 1145177368}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1 &1594730639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1521,6 +1526,13 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594730639}
   m_CullTransparentMesh: 1
+=======
+--- !u!1 &1622717313 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1887969965315444, guid: 1656aec7f2b3ffe45a91801f58b00253, type: 3}
+  m_PrefabInstance: {fileID: 546283902}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!1 &1697186419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,8 +1786,13 @@ MonoBehaviour:
   verticalInput: 0
   leftBoundary: -20
   rightBoundary: 20
+<<<<<<< Updated upstream
   hasPowerup: 1
   powerupIndicator: {fileID: 623013968}
+=======
+  hasPowerup: 0
+  powerupIndicator: {fileID: 1622717313}
+>>>>>>> Stashed changes
 --- !u!54 &1928445234
 Rigidbody:
   m_ObjectHideFlags: 0
